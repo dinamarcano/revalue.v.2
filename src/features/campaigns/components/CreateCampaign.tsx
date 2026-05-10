@@ -22,7 +22,7 @@ const CreateCampaign = ({ onCampaignCreated }: { onCampaignCreated: () => void }
       alert("¡Campaña creada con éxito!");
       setName('');
       setPoints('');
-      onCampaignCreated(); // Esto refrescará la lista
+      onCampaignCreated(); 
     }
     setLoading(false);
   };

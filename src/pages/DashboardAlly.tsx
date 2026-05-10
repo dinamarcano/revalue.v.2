@@ -9,7 +9,7 @@ const DashboardAlly = () => {
 
   useEffect(() => {
     const fetchStats = async () => {
-      // Contamos cuántas filas hay en la tabla de campañas
+     
       const { count, error } = await supabase
         .from('campaigns')
         .select('*', { count: 'exact', head: true });

@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-// Usamos el nombre exacto de tu archivo
+
 import revalueLogo from '../assets/logos/REVALUE BLANCO 1.svg'; 
 
 const WelcomeAlly = () => {

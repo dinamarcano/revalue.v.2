@@ -33,14 +33,14 @@ const CampaignList = () => {
       .eq('id', id);
 
     if (error) alert("Error al borrar: " + error.message);
-    else fetchCampaigns(); // Recargamos la lista automáticamente
+    else fetchCampaigns(); 
   };
 
   useEffect(() => {
     fetchCampaigns();
   }, []);
 
-  // Función para darle un estilo dinámico según el material
+  
   const getMaterialStyle = (name: string) => {
     const n = name.toLowerCase();
     if (n.includes('plastico') || n.includes('plastic')) return 'border-blue-200 bg-blue-50 text-blue-700';

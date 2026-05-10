@@ -18,7 +18,7 @@ const LoginAlly = () => {
     if (error) {
       alert("Error: " + error.message);
     } else {
-      // Redirección automática al Dashboard
+     
       navigate('/dashboard'); 
     }
   };
