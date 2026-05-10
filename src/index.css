@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --color-revalue-green: #22C55E;
+  --color-revalue-dark: #1A3D2F;
+}
