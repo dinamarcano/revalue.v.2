@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CampaignList from '../features/campaigns/components/CampaignList';
-import CreateCampaign from '../features/campaigns/components/CreateCampaign';
+import CampaignList from '../../features/campaigns/components/CampaignList';
+import CreateCampaign from '../../features/campaigns/components/CreateCampaign';
 
 const CampaignsPage = () => {
   const [showForm, setShowForm] = useState(false);

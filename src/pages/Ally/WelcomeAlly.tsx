@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import revalueLogo from '../assets/logos/REVALUE BLANCO 1.svg'; 
+import revalueLogo from "../../assets/logos/REVALUE BLANCO 1.svg";
 
 const WelcomeAlly = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const WelcomeAlly = () => {
             className="w-full h-auto"
           />
         </div>
-        <p className="text-2xl font-bold tracking-tight">Allies</p>
+        <p className="text-2xl font-bold tracking-tight">Welcome to ReValue </p>
       </div>
 
       {/* Botones con los colores de tu guía de estilo */}

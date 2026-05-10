@@ -1,26 +1,33 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
-// Importaciones de Páginas
-import WelcomeAlly from './pages/WelcomeAlly';
-import LoginAlly from './pages/LoginAlly';
-import RegisterAlly from './pages/RegisterAlly';
+// Layouts
 import MainLayout from './layouts/MainLayout';
-import DashboardAlly from './pages/DashboardAlly';
-import CampaignsPage from './pages/CampaignsPage';
-import MachinesPage from './pages/MachinesPage';
-import RewardsPage from './pages/RewardsPage';
-import ProfilePage from './pages/ProfilePage'; // Importación de la página real
+import UserLayout from './layouts/UserLayout';
+
+// Páginas Ally
+import WelcomeAlly from './pages/Ally/WelcomeAlly';
+import LoginAlly from './pages/Ally/LoginAlly';
+import RegisterAlly from './pages/Ally/RegisterAlly';
+import DashboardAlly from './pages/Ally/DashboardAlly';
+import CampaignsPage from './pages/Ally/CampaignsPage';
+import MachinesPage from './pages/Ally/MachinesPage';
+import RewardsPage from './pages/Ally/RewardsPage';
+import ProfilePage from './pages/Ally/ProfilePage';
+
+// Páginas User
+import UserHome from './pages/User/UserHome';
+import MachinesUser from './pages/User/MachinesUser';
+import RankingUser from './pages/User/RankingUser'; // La nueva
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Rutas Públicas */}
         <Route path="/" element={<WelcomeAlly />} />
         <Route path="/login" element={<LoginAlly />} />
         <Route path="/register" element={<RegisterAlly />} />
 
-        {/* Rutas Privadas con Sidebar (MainLayout) */}
+        {/* RUTA ALIADO */}
         <Route element={<MainLayout />}>
           <Route path="/dashboard" element={<DashboardAlly />} />
           <Route path="/campaigns" element={<CampaignsPage />} />
@@ -29,7 +36,13 @@ function App() {
           <Route path="/profile" element={<ProfilePage />} />
         </Route>
 
-        {/* Redirección en caso de ruta inexistente */}
+        {/* RUTA USUARIO */}
+        <Route element={<UserLayout />}>
+          <Route path="/user/home" element={<UserHome />} />
+          <Route path="/user/scan" element={<MachinesUser />} />
+          <Route path="/user/ranking" element={<RankingUser />} />
+        </Route>
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
